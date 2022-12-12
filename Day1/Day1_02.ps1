@@ -1,0 +1,1 @@
+$TotalList = @();$InputList = (Get-Content -Path '.\Input.txt' -Raw) -split "`r`n`r`n" | ForEach-Object {$TotalElf = 0; $Group = $_ -split '\r\n' | ForEach-Object {$TotalElf = $TotalElf + $_} ; $TotalList += $TotalElf;$Total = $TotalList | Sort-Object | Select-Object -Last 1};$Total = $TotalList | Sort-Object | Select-Object -Last 1
